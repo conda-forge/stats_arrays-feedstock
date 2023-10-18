@@ -37,7 +37,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file:
-    - LICENSE
+    - LICENSE.txt
   doc_url: http://stats-arrays.readthedocs.io/en/latest/
   dev_url: https://github.com/brightway-lca/stats_arrays
 
