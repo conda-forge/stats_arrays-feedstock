@@ -1,5 +1,5 @@
 {% set name = "stats_arrays" %}
-{% set version = "0.6.5" %}
+{% set version = "0.6.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/stats_arrays-{{ version }}.tar.gz
-  sha256: 184102119f5884b8b522584b1e14d3a0c1571f524104a6529ce991e0928417cb
+  sha256: 22a65d7163ebe2cfda3d4ab7824d71394aabf3f15eff85abfdb328f37e5fc40f
 
 build:
   noarch: python
