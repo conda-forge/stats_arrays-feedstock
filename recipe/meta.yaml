@@ -32,7 +32,7 @@ test:
     - pip
 
 about:
-  home: https://bitbucket.org/cmutel/stats_arrays
+  home: https://github.com/brightway-lca/stats_arrays
   summary: Standard NumPy array interface for defining uncertain parameters
   license: BSD-3-Clause
   license_family: BSD
