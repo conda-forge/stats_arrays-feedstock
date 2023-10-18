@@ -3,7 +3,7 @@ About stats_arrays-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/stats_arrays-feedstock/blob/main/LICENSE.txt)
 
-Home: https://bitbucket.org/cmutel/stats_arrays
+Home: https://github.com/brightway-lca/stats_arrays
 
 Package license: BSD-3-Clause
 
