@@ -21,7 +21,7 @@ requirements:
   run:
     - numpy
     - python >=3.6
-    - scipy
+    - scipy >=1.10
 
 test:
   imports:
@@ -37,7 +37,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file:
-    - LICENSE.txt
+    - LICENSE
   doc_url: http://stats-arrays.readthedocs.io/en/latest/
   dev_url: https://github.com/brightway-lca/stats_arrays
 
