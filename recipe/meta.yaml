@@ -6,21 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/stats_arrays-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/stats_arrays-{{ version }}.tar.gz
   sha256: cf3987736997974dc7988711a3757d2d9b9ef4d252f5e3ca2e83a5b474e6ae39
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: 1
 
 requirements:
   host:
+    - python {{ python_min }}
     - pip
-    - python >=3.6
+    - setuptools
   run:
     - numpy
-    - python >=3.6
+    - python >={{ python_min }}
     - scipy >=1.10
 
 test:
@@ -29,6 +30,7 @@ test:
   commands:
     - pip check
   requires:
+    - python {{ python_min }}
     - pip
 
 about:
@@ -36,8 +38,7 @@ about:
   summary: Standard NumPy array interface for defining uncertain parameters
   license: BSD-3-Clause
   license_family: BSD
-  license_file:
-    - LICENSE
+  license_file: LICENSE
   doc_url: http://stats-arrays.readthedocs.io/en/latest/
   dev_url: https://github.com/brightway-lca/stats_arrays
 
