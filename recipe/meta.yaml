@@ -1,5 +1,5 @@
 {% set name = "stats_arrays" %}
-{% set version = "0.7" %}
+{% set version = "0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/stats_arrays-{{ version }}.tar.gz
-  sha256: cf3987736997974dc7988711a3757d2d9b9ef4d252f5e3ca2e83a5b474e6ae39
+  sha256: 4bc86cd2bcd1bab35954cca87a4ba00327bbcde6df8e11fbfaca1cf365f00904
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -20,9 +20,9 @@ requirements:
     - pip
     - setuptools
   run:
-    - numpy
+    - numpy >=1.6.0
     - python >={{ python_min }}
-    - scipy >=1.10
+    - scipy >=1.1.0
 
 test:
   imports:
