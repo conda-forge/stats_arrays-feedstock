@@ -18,10 +18,10 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - setuptools >=68.0
   run:
-    - numpy
     - python >={{ python_min }}
+    - numpy
     - scipy
 
 test:
