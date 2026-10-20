@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: stats_arrays
-  version: "3.0"
+  version: "4.0"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/stats_arrays-${{ version }}.tar.gz
-  sha256: 4c213dbfbffad81027f8a87df4d4fcc580ee9661af7a6ea11fe2309211bd6c37
+  sha256: 6be56ac89d36a3fdc3bc6aed5ace4fe5afa2f965153d8909e3e00c7e7530dc5e
 
 build:
   number: 0
