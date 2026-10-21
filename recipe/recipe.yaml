@@ -32,7 +32,9 @@ tests:
       imports:
         - stats_arrays
       pip_check: true
-      python_version: ${{ python_min }}
+      python_version:
+        - ${{ python_min }}
+        - "*"
 
 about:
   summary: Standard NumPy array interface for defining uncertain parameters
