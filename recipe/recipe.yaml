@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: stats_arrays
-  version: "4.0"
+  version: 5.0.1
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/stats_arrays-${{ version }}.tar.gz
-  sha256: 6be56ac89d36a3fdc3bc6aed5ace4fe5afa2f965153d8909e3e00c7e7530dc5e
+  sha256: cede6970e91029d80912d25bec1ac9515e51013268dc9f8326bcf111c8b14ee0
 
 build:
   number: 0
@@ -24,9 +24,8 @@ requirements:
     - setuptools >=68.0
   run:
     - python >=${{ python_min }}
-    - numpy
+    - numpy >=2
     - scipy
-
 tests:
   - python:
       imports:
@@ -34,7 +33,7 @@ tests:
       pip_check: true
       python_version:
         - ${{ python_min }}
-        - "*"
+        - '*'
 
 about:
   summary: Standard NumPy array interface for defining uncertain parameters
